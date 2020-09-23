@@ -36,6 +36,11 @@ class Place:
                 count += 1
         return list_data
 
+    def is_important(self):
+        if self.priority <= 2:
+            return True
+        else:
+            return False
 
 
 
