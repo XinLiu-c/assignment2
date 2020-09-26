@@ -72,6 +72,12 @@ class PlaceCollection:
                 count += 1
         print('{} places. You still want to visit {} places.'.format(count-1, self.count_n()))
 
+    """Store data to the csv file"""
+    def save_places(self, filename):
+        """open the csv file in write mode"""
+        with open(filename, 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerows(self.list_data)
 
 
 
