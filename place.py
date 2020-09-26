@@ -1,41 +1,31 @@
 """..."""
 from operator import itemgetter
-import csv
 # Create your Place class in this file
 
 
 class Place:
-    """..."""
+    """initialise place"""
     def __int__(self,name="",country="",priority=0,visited_status=""):
         self.name=name
         self.country=country
         self.priority=priority
         self.visited_status=visited_status
 
+    """return string of place object"""
     def __str__(self):
         return "{} ({}) with priority {} visited status: {}".format(self.name, self.country, self.priority,self.visited_status)
 
-    def mark_places(self):
-        list_data = []  # empty list
-        filename = "places.csv"
-        input_file = open(filename, 'r')
-        for line in input_file:
-            line = line.strip()  # Remove the \n
-            parts = line.split(',')  # Separate the data into its parts
-            list_data.append(parts)
-        input_file.close()
-        list_data.sort(key=itemgetter(3))  # sort data according to "n" and "v"
-        list_data.sort(key=itemgetter(2), reverse=True)  # sort data according to the priority number
-        count = 1
-        for list in list_data:
-            if list[3] == "n":
-                print("*{}. {:9} in {:12} priority {:2}".format(count, list[0], list[1], list[2]))
-                count += 1
-            else:
-                print(" {}. {:9} in {:12} priority {:2}".format(count, list[0], list[1], list[2]))
-                count += 1
-        return list_data
+    """return visited places"""
+    def mark_vplaces(self):
+        self.visited_status="v"
+        return self.visited_status
 
+    """return unvisited places"""
+    def mark_nplaces(self):
+        self.visited_status="n"
+        return self.visited_status
+
+    """determine important places """
     def is_important(self):
         if self.priority <= 2:
             return True
