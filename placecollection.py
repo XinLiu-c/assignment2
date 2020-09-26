@@ -36,3 +36,17 @@ class PlaceCollection:
 
         return self.list_data
 
+    def s_places(self, key="visited"):
+        """sort places"""
+        if key.strip().upper()=='NAME':
+            key = 0
+        elif key.strip().upper()=='COUNTRY':
+            key = 1
+        elif key.strip().upper()=='PRIORITY':
+            key = 2
+        elif key.strip().upper()=='VISITED':
+            key = 3
+        self.list_data = sorted(self.list_data, key=itemgetter(key, 2))
+
+        return self.list_data
+
