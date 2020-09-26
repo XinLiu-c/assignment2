@@ -16,10 +16,16 @@ def run_tests():
 
     # Test initial-value place
     print("Test initial-value place:")
-    new_place = Place("Malagar", "Spain", 1, False)
+    add_place = Place("Malagar", "Spain", 1, False)
+
     # TODO: Write tests to show this initialisation works
+    print(add_place)
 
     # TODO: Add more tests, as appropriate, for each method
+    """test visited places"""
+    add_place.mark_vplaces()
+    print(add_place)
+
 
 
 run_tests()
