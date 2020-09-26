@@ -79,7 +79,9 @@ class PlaceCollection:
             writer = csv.writer(f)
             writer.writerows(self.list_data)
 
-
+    """Add a new place"""
+    def add_place(self, place):
+        self.list_data.append([place.name, place.country, place.priority, place.v_status])
 
 
 
