@@ -59,6 +59,35 @@ def mark_places(place_collection, list_data):
             else:
                 print("Invalid menu choice")
 
+    """functions that adding a new place into the csv file"""
+    def add_place():
+        while True:  # while loop - validation for name
+            name = input("Name: ")
+            if name == "":
+                print("Input cannot be blank.")
+            else:
+                break
+
+        """while loop - validation for country"""
+        while True:
+            country = input("Country: ")
+            if country == "":
+                print("Input cannot be blank.")
+            else:
+                break
+
+        """while loop - validation for priority"""
+        while True:
+            priority = input("Priority: ")
+            if priority.isdigit():
+                if int(priority) <= 0:
+                    print("Number must be >0 ")
+                else:
+                    break
+            else:
+                print("Invalid input, enter a valid number.")
+
+        return name, country, priority
 
     if __name__ == '__main__':
         main()
