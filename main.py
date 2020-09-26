@@ -24,6 +24,11 @@ class TravelTrackerApp(App):
         self.place_collection = PlaceCollection()
         self.place_collection.read_places('places.csv')
 
+    def build(self):
+        self.title="Travel Tracker"
+        self.root=Builder.load_file("app.kv")
+        return self.root
+
 
 
 if __name__ == '__main__':
