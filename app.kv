@@ -33,3 +33,29 @@ BoxLayout:
             id:btn_c
             text:"Clear"
 
+    BoxLayout:
+        orientation:"vertical"
+        Label:
+            id:count_n
+            text:"Places to visit:"
+            size_hint: 0.5,0.3
+            pos_hint:{'x':0.2, 'y':0.5}
+        Button:
+            text:"Lima in Peru, priority"
+            background_color:(0.78,0.75,1,1)
+        Button:
+            text:"Rome in Italy, priority"
+            background_color:(0.78,0.75,1,1)
+        Button:
+            text:"Auckland in New Zealand, priority"
+            background_color:(0.4,0.45,1,0.5)
+        Button:
+            text:"Malaga in Spain, priority"
+            background_color:(0.4,0.45,1,0.5)
+        BoxLayout:
+            id:places_listed
+        Label:
+            id:end
+            text:"Welcome to use Travel Tracker 2.0"
+            size_hint: 0.6, 1
+            pos_hint: {'x':0.2, 'y':0}
