@@ -37,3 +37,28 @@ def mark_places(place_collection, list_data):
                 break
         return list_data
 
+    def main():
+        """Run the whole process"""
+        print("Travel Tracker 1.0 - by Xin Liu")
+        place_collection = PlaceCollection()
+        listed_places = place_collection.read_places("places.csv")
+
+        while True:
+            choice = get_menu()
+            if choice == "L":
+                place_collection.list_data
+            elif choice == "A":
+                add_places = add_place()
+                place_collection.add_place(Place(add_places[0], add_places[1], add_places[2], add_places[3]))
+            elif choice == "M":
+                mark_places(place_collection, listed_places)
+
+            elif choice == "Q":
+                print("{} places saved to places.csv".format(len(place_collection.list_data)))
+                break
+            else:
+                print("Invalid menu choice")
+
+
+    if __name__ == '__main__':
+        main()
