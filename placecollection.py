@@ -60,3 +60,20 @@ class PlaceCollection:
                 pass
         return b
 
+    def list_all_places(self,key="visited"):
+        """list places in a list"""
+        count = 1
+        for list in self.s_places(key):
+            if list[3] == "n":
+                print("*{}. {:9} in {:12} priority {:2}".format(count, list[0], list[1], list[2]))
+                count += 1
+            else:
+                print(" {}. {:9} in {:12} priority {:2}".format(count, list[0], list[1], list[2]))
+                count += 1
+        print('{} places. You still want to visit {} places.'.format(count-1, self.count_n()))
+
+
+
+
+
+
