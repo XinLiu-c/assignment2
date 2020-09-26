@@ -43,6 +43,8 @@ def run_tests():
     place_collection.s_places("visited")
     print(place_collection)
 
-
+    """Test listing places"""
+    print("Test listing:")
+    place_collection.list_all_places()
 
 run_tests()
