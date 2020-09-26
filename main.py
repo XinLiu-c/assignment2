@@ -64,7 +64,9 @@ class TravelTrackerApp(App):
         """save csv file"""
         self.place_collection.s_places("places.csv")
 
-
+    def count_n(self):
+        n_place=self.place_collection.count_n()
+        self.root.ids.count_n.text="Places to visit: {}".format(n_place)
 
 if __name__ == '__main__':
     TravelTrackerApp().run()
