@@ -38,6 +38,11 @@ def run_tests():
     place_collection.s_places("priority")
     print(place_collection)
 
+    """Test sorting places - visited_status"""
+    print("Test sorting - visited:")
+    place_collection.s_places("visited")
+    print(place_collection)
+
 
 
 run_tests()
