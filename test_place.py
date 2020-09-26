@@ -26,6 +26,10 @@ def run_tests():
     add_place.mark_vplaces()
     print(add_place)
 
+    """test unvisited places"""
+    add_place.mark_nplaces()
+    print(add_place)
+
 
 
 run_tests()
