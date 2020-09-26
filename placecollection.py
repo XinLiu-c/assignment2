@@ -50,3 +50,13 @@ class PlaceCollection:
 
         return self.list_data
 
+    def count_n(self):
+        """display the number of unvisited places"""
+        b=0
+        for i in self.list_data:
+            if i[3] == 'n':
+                b+=1
+            else:
+                pass
+        return b
+
