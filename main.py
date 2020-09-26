@@ -46,6 +46,20 @@ class TravelTrackerApp(App):
                 self.place_collection.list_data.append([add_name,add_country,add_priority],"n")
         self.root.ids.end.text = end
 
+    def create_widgets(self,key="visited"):
+        """add btn or other functions to app"""
+        self.count_n()
+        self.place_collection.s_places(key)
+
+        for places in self.place_collection.list_data:
+            if places[3]=="n":
+                v=""
+            else:
+                v="(visited)"
+            place_str="{} ({}) with priority {} {}".format(places[0],places[1],places[2],v)
+            btn = Button(id=places[0], text=place_str)
+            self.root.ids.places_listed.add_widget(btn)
+
 
 
 if __name__ == '__main__':
