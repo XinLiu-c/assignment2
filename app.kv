@@ -1,2 +1,35 @@
-# Create your Kivy layout in the kv language here
+    # Create your Kivy layout in the kv language here
 BoxLayout:
+
+    BoxLayout:
+        size_hint_x: 0.4
+        orientation:"vertical"
+        Label:
+            text:"Sorted By:"
+        Spinner:
+            id:dropdown
+            text:app.current_state
+            values: app.states
+            on_text:app.change_state(self.text)
+        Label:
+            text:"Add New Place:"
+        Label:
+            text:"Name:"
+        TextInput:
+            id:add_name
+        Label:
+            text:"Country:"
+        TextInput:
+            id:add_country
+        Label:
+            text:"Priority"
+        TextInput:
+            id:add_priority
+
+        Button:
+            id:btn_a
+            text:"Add Place"
+        Button:
+            id:btn_c
+            text:"Clear"
+
