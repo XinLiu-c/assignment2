@@ -30,6 +30,7 @@ def run_tests():
     add_place.mark_nplaces()
     print(add_place)
 
-
+    """test important place"""
+    add_place.is_important()
 
 run_tests()
