@@ -60,6 +60,10 @@ class TravelTrackerApp(App):
             btn = Button(id=places[0], text=place_str)
             self.root.ids.places_listed.add_widget(btn)
 
+    def on_stop(self):
+        """save csv file"""
+        self.place_collection.s_places("places.csv")
+
 
 
 if __name__ == '__main__':
