@@ -28,6 +28,16 @@ def run_tests():
     place_collection.s_places("name")
     print(place_collection)
 
+    """Test sorting - country:"""
+    print("Test sorting - country:")
+    place_collection.s_places("country")
+    print(place_collection)
+
+    """Test sorting places - priority"""
+    print("Test sorting - priority:")
+    place_collection.s_places("priority")
+    print(place_collection)
+
 
 
 run_tests()
